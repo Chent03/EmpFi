@@ -38,7 +38,7 @@ import { GooglePlus } from '@ionic-native/google-plus';
 
 
 export const config = {
-  apiKey: "AIzaSyCMk4s-dVBacV4efw5zwyGEikk2v2xlgxM",
+  apiKey: "INSERT YOUR APIKEY",
   authDomain: "cs639firebase-a59a5.firebaseapp.com",
   databaseURL: "https://cs639firebase-a59a5.firebaseio.com",
   projectId: "cs639firebase-a59a5",
