@@ -1,0 +1,88 @@
+// http://ionicframework.com/docs/v2/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+
+#avatarcontainer{
+  width:100%;
+}
+#avatar{
+  margin:auto;
+  width: 200px;
+  height: 200px;
+}
+.item-ios ion-avatar img{
+  width: 150px;
+  height: 150px;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Abril Fatface', cursive;
+  text-align: center;
+
+
+}
+button{
+  font-family: 'Abril Fatface', cursive;
+
+}
+ion-list{
+  text-align: center;
+  color: #00796B;
+}
+ion-item{
+  text-align: center;
+  color: #00796B;
+}
+
+.label-ios{
+  text-align: center;
+}
+.ios .landing {
+  background-color: #00796B;
+}
+.button-ios{
+  color:#00796B;
+}
+
+h5{
+  font-size: 50px;
+  color: #00796B;
+}
+p{
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  color: #00796B;
+
+}
+ion-title{
+  font-family: 'Abril Fatface', cursive;
+  text-align: center;
+}
+ion-item{
+  font-family: 'Oswald', sans-serif;
+
+}
+.bar-button-default-ios, .bar-button-default.bar-button-ios-default, .bar-button-clear-ios-default{
+  color: black;
+}
+a {
+  color: black;
+}
+.item-ios{
+  color: black;
+
+}

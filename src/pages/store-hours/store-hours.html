@@ -1,0 +1,97 @@
+<!--
+  Generated template for the StoreHours page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>StoreHours</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list>
+      <ion-item>
+        <ion-label>Day of the week</ion-label>
+        <ion-select [(ngModel)]="day">
+          <ion-option value="monday">Monday</ion-option>
+          <ion-option value="tuesday">Tuesday</ion-option>
+          <ion-option value="wednesday">Wednesday</ion-option>
+          <ion-option value="thursday">Thursday</ion-option>
+          <ion-option value="friday">Friday</ion-option>
+          <ion-option value="saturday">Saturday</ion-option>
+          <ion-option value="sunday">Sunday</ion-option>
+
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>Open</ion-label>
+        <ion-select [(ngModel)]="open">
+          <ion-option value="12AM">12AM</ion-option>
+          <ion-option value="1AM">1AM</ion-option>
+          <ion-option value="2AM">2AM</ion-option>
+          <ion-option value="3AM">3AM</ion-option>
+          <ion-option value="4AM">4AM</ion-option>
+          <ion-option value="5AM">5AM</ion-option>
+          <ion-option value="6AM">6AM</ion-option>
+          <ion-option value="7AM">7AM</ion-option>
+          <ion-option value="8AM">8AM</ion-option>
+          <ion-option value="9AM">9AM</ion-option>
+          <ion-option value="10AM">10AM</ion-option>
+          <ion-option value="11AM">11AM</ion-option>
+          <ion-option value="12PM">12PM</ion-option>
+          <ion-option value="1PM">1PM</ion-option>
+          <ion-option value="2PM">2PM</ion-option>
+          <ion-option value="3PM">3PM</ion-option>
+          <ion-option value="4PM">4PM</ion-option>
+          <ion-option value="5PM">5PM</ion-option>
+          <ion-option value="6PM">6PM</ion-option>
+          <ion-option value="7PM">7PM</ion-option>
+          <ion-option value="8PM">8PM</ion-option>
+          <ion-option value="9PM">9PM</ion-option>
+          <ion-option value="10PM">10PM</ion-option>
+          <ion-option value="11PM">11PM</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>Closing</ion-label>
+        <ion-select [(ngModel)]="closing">
+          <ion-option value="12AM">12AM</ion-option>
+          <ion-option value="1AM">1AM</ion-option>
+          <ion-option value="2AM">2AM</ion-option>
+          <ion-option value="3AM">3AM</ion-option>
+          <ion-option value="4AM">4AM</ion-option>
+          <ion-option value="5AM">5AM</ion-option>
+          <ion-option value="6AM">6AM</ion-option>
+          <ion-option value="7AM">7AM</ion-option>
+          <ion-option value="8AM">8AM</ion-option>
+          <ion-option value="9AM">9AM</ion-option>
+          <ion-option value="10AM">10AM</ion-option>
+          <ion-option value="11AM">11AM</ion-option>
+          <ion-option value="12PM">12PM</ion-option>
+          <ion-option value="1PM">1PM</ion-option>
+          <ion-option value="2PM">2PM</ion-option>
+          <ion-option value="3PM">3PM</ion-option>
+          <ion-option value="4PM">4PM</ion-option>
+          <ion-option value="5PM">5PM</ion-option>
+          <ion-option value="6PM">6PM</ion-option>
+          <ion-option value="7PM">7PM</ion-option>
+          <ion-option value="8PM">8PM</ion-option>
+          <ion-option value="9PM">9PM</ion-option>
+          <ion-option value="10PM">10PM</ion-option>
+          <ion-option value="11PM">11PM</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+
+    <button ion-button block (click)="registerHours()">
+    Submit
+    </button>
+
+
+
+</ion-content>

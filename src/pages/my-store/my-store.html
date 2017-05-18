@@ -1,0 +1,76 @@
+<!--
+  Generated template for the MyStore page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>My Store</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-item>
+    <img [src]="storePic?.storeBanner || placeholderPic" width="100%">
+  </ion-item>
+  <ion-item>
+    <h1>Employees:
+      <ion-icon name="ios-add-circle-outline" (click)="addEmployees()"></ion-icon>
+    </h1>
+
+    <ion-row>
+        <ion-avatar *ngFor="let event of eventList"
+          (click)="goToEmployeeDetail(event?.name)">
+          <img *ngIf="!event?.profile" src="assets/img/brian.png">
+          <img *ngIf="event?.profile" src="{{event?.profile}}">
+        </ion-avatar>
+      <!--<ion-icon name="ios-add-circle-outline" (click)="addEmployees()"></ion-icon>-->
+      <!--<button ion-button icon-only (click)="addEmployees()"><ion-icon name="add"></ion-icon></button>-->
+    </ion-row>
+  </ion-item>
+  <ion-item>
+
+    <h1>Store Hours:
+      <ion-icon name="ios-add-circle-outline" (click)="editStoreHours()"></ion-icon>
+      <!--<button ion-button icon-only (click)="editStoreHours()"><ion-icon name="add"></ion-icon></button>-->
+    </h1>
+    <p *ngIf="storeHours?.mondayOpen || storeHours?.mondayClose">Monday: {{storeHours?.mondayOpen}} - {{storeHours?.mondayClose}}</p>
+    <p *ngIf="storeHours?.tuesdayOpen || storeHours?.tuesdayClose">Tuesday: {{storeHours?.tuesdayOpen}} - {{storeHours?.tuesdayClose}}</p>
+    <p *ngIf="storeHours?.wednesdayOpen || storeHours?.wednesdayClose">Wednesday: {{storeHours?.wednesdayOpen}} - {{storeHours?.wednesdayClose}}</p>
+    <p *ngIf="storeHours?.thursdayOpen || storeHours?.thursdayClose">Thursday: {{storeHours?.thursdayOpen}} - {{storeHours?.thursdayClose}}</p>
+    <p *ngIf="storeHours?.fridayOpen || storeHours?.fridayClose">Friday: {{storeHours?.fridayOpen}} - {{storeHours?.fridayClose}}</p>
+    <p *ngIf="storeHours?.saturdayOpen || storeHours?.saturdayClose">Saturday: {{storeHours?.saturdayOpen}} - {{storeHours?.saturdayClose}}</p>
+    <p *ngIf="storeHours?.sundayOpen || storeHours?.sundayClose">Sunday: {{storeHours?.sundayOpen}} - {{storeHours?.sundayClose}}</p>
+
+  </ion-item>
+
+  <ion-item>
+    <h1>Menu:
+      <ion-icon name="ios-add-circle-outline" (click)="addMenuItem()"></ion-icon>
+      <!--<button ion-button icon-only (click)="addMenuItem()"><ion-icon name="add"></ion-icon></button>-->
+    </h1>
+    <ion-list>
+      <ion-item *ngFor="let menu of menuList" (swipe)="removeItem($event, menu?.key)">
+        {{menu?.item}} : {{menu?.price}}
+        <ion-icon name="ios-arrow-dropright" icon-only end></ion-icon>
+      </ion-item>
+    </ion-list>
+  </ion-item>
+
+  <!--<ion-list>-->
+    <!--<ion-item *ngFor="let event of eventList">{{event?.id}} </ion-item>-->
+  <!--</ion-list>-->
+  <ion-fab bottom right>
+    <button ion-fab color="vibrant" mini><ion-icon name="add"></ion-icon></button>
+    <ion-fab-list side="top">
+      <button ion-fab (click)="takePicture()"><ion-icon name="camera"></ion-icon></button>
+      <button ion-fab (click)="uploadPicture()"><ion-icon name="ios-cloud-upload-outline"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+
+</ion-content>

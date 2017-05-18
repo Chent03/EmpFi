@@ -1,0 +1,32 @@
+.ios{
+  page-store {
+
+    ion-content{
+      margin: 0;
+      border: 0;
+      padding: 0;
+    }
+    ion-item img{
+      margin: 0;
+      border: 0;
+      width: 100%;
+      padding: 0;
+    }
+    ion-avatar{
+      img{
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+}
+
+.label-ios {
+  margin: 0px 0px 11px 0;
+}
+.item-ios{
+  padding-left: 0px;
+}
+.item-ios.item-block .item-inner{
+  padding-right: 0px;
+}

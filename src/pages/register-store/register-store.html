@@ -1,0 +1,85 @@
+<!--
+  Generated template for the RegisterStore page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Register Store</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <form [formGroup]="registerStoreForm" (submit)="registerStore()" novalidate>
+
+  <ion-item>
+    <ion-label stacked>Store Name: </ion-label>
+    <ion-input #storeName formControlName="storeName" type="text"
+               [class.invalid]="!registerStoreForm.controls.storeName.valid && registerStoreForm.controls.storeName.dirty">
+    </ion-input>
+  </ion-item>
+
+  <ion-item class="error-message"
+  *ngIf="!registerStoreForm.controls.storeName.valid && registerStoreForm.controls.storeName.dirty">
+    <p>Input required</p>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Street Address :</ion-label>
+    <ion-input #storeAddress formControlName="storeAddress" type="text"
+    [class.invalid]="!registerStoreForm.controls.storeAddress.valid && registerStoreForm.controls.storeAddress.dirty">
+    </ion-input>
+  </ion-item>
+
+  <ion-item class="error-message"
+            *ngIf="!registerStoreForm.controls.storeAddress.valid && registerStoreForm.controls.storeAddress.dirty">
+    <p>Input required</p>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>City: </ion-label>
+    <ion-input #storeCity formControlName="storeCity" type="text"
+      [class.invalid]="!registerStoreForm.controls.storeCity.valid && registerStoreForm.controls.storeCity.dirty">
+    </ion-input>
+  </ion-item>
+
+  <ion-item class="error-message" *ngIf="!registerStoreForm.controls.storeCity.valid && registerStoreForm.controls.storeCity.dirty">
+    <p>Input required</p>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>State: </ion-label>
+    <ion-input #storeState formControlName="storeState" type="text"
+               [class.invalid]="!registerStoreForm.controls.storeState.valid && registerStoreForm.controls.storeState.dirty">
+    </ion-input>
+  </ion-item>
+
+  <ion-item class="error-message" *ngIf="!registerStoreForm.controls.storeState.valid && registerStoreForm.controls.storeState.dirty">
+    <p>Input required</p>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked> Zip Code: </ion-label>
+    <ion-input #storeZip formControlName="storeZip" type="text"
+      [class.invalid]="!registerStoreForm.controls.storeZip.valid && registerStoreForm.controls.storeZip.dirty">
+    </ion-input>
+  </ion-item>
+
+  <ion-item class="error-message"
+    *ngIf="!registerStoreForm.controls.storeZip.valid && registerStoreForm.controls.storeZip.dirty">
+    <p>Input required</p>
+  </ion-item>
+
+  <button ion-button block type="submit">
+    Submit
+  </button>
+
+  </form>
+
+</ion-content>
